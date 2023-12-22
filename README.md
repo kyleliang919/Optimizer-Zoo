@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Standardizing Test Suite for Optimizer Experiments repository by the UT [Statistical Learning & AI Group](https://www.cs.utexas.edu/~qlearning/). This repository is designed to provide a comprehensive and standardized testing framework for evaluating optimization algorithms in the context of transformer models. As transformers continue to play a pivotal role in natural language processing and other AI applications, the need for robust and standardized testing becomes crucial.
+Welcome to the Standardizing Test Suite for Optimizer Experiments repository by the [UT Statistical Learning & AI Group](https://www.cs.utexas.edu/~qlearning/). This repository is designed to provide a comprehensive and standardized testing framework for evaluating optimization algorithms in the context of transformer models. As transformers continue to play a pivotal role in natural language processing and other AI applications, the need for robust and standardized testing becomes crucial.
 
 ## Table of Contents
 
