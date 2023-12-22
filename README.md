@@ -14,7 +14,8 @@ Welcome to the Standardizing Test Suite for Optimizer Experiments repository by 
 4. [Usage](#usage)
 5. [Contributing](#contributing)
 6. [License](#license)
-7. [Acknowledgements](#acknowledgements)
+7. [Citations](#citations)
+8. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -75,6 +76,13 @@ We welcome contributions from the community. If you would like to contribute, pl
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Citations
+
+If you use this test suite in your research or work, please consider citing the following relevant publications:
+
+1. Chen, Lizhang, et al. "Lion Secretly Solves Constrained Optimization: As Lyapunov Predicts." arXiv preprint arXiv:2310.05898 (2023).
+2. Author B et al. "Title of Paper 2." Conference, Year.
 
 ## Acknowledgements
 
