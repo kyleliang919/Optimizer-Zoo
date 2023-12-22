@@ -85,7 +85,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you use this test suite in your research or work, please consider citing the following relevant publications:
 
-1. Chen, Lizhang, et al. "Lion Secretly Solves Constrained Optimization: As Lyapunov Predicts." arXiv preprint arXiv:2310.05898 (2023).
+1. [Chen, Lizhang, et al. "Lion Secretly Solves Constrained Optimization: As Lyapunov Predicts." arXiv preprint arXiv:2310.05898 (2023).](https://arxiv.org/abs/2310.05898) [Bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:VSH2VlwlnCoJ:scholar.google.com/&output=citation&scisdr=ClH2GPDxEMyG8inDrmE:AFWwaeYAAAAAZYXFtmFYCW7Y8CwiBWAoZU665a8&scisig=AFWwaeYAAAAAZYXFtj5e_waaw90lqnrPpQVHSy8&scisf=4&ct=citation&cd=-1&hl=en)
 2. Author B et al. "Title of Paper 2." Conference, Year.
 
 ## Acknowledgements
