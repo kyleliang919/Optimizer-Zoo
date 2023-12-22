@@ -12,10 +12,11 @@ Welcome to the Standardizing Test Suite for Optimizer Experiments repository by 
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
 4. [Usage](#usage)
-5. [Contributing](#contributing)
-6. [License](#license)
-7. [Citations](#citations)
-8. [Acknowledgements](#acknowledgements)
+5. [Benchmarks](#benchmarks)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Citations](#citations)
+9. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -68,6 +69,9 @@ To run experiments using the test suite, follow these steps:
 3. View results and analysis in the `results` directory.
 
 For detailed usage instructions, refer to the [user documentation](docs/user-docs.md).
+
+## Benchmarks
+Please refer to the following tables for the performance of different optimizers
 
 ## Contributing
 
