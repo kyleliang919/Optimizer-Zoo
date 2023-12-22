@@ -37,7 +37,7 @@ In the rapidly evolving field of AI, transformer models have become indispensabl
 Ensure you have the following prerequisites installed:
 
 - Python 3.x
-- [TensorFlow](https://www.tensorflow.org/install) or [PyTorch](https://pytorch.org/get-started/locally/)
+- [PyTorch](https://pytorch.org/get-started/locally/)
 - Other dependencies (specified in `requirements.txt`)
 
 ### Installation
