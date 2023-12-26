@@ -45,8 +45,8 @@ Ensure you have the following prerequisites installed:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/UT-StatLearning-AI/optimizer-test-suite.git
-    cd optimizer-test-suite
+    git clone https://github.com/kyleliang919/Optimizer-Zoo.git
+    cd Optimizer-Zoo
     ```
 
 2. Install dependencies:
@@ -57,14 +57,58 @@ Ensure you have the following prerequisites installed:
 
 ## Usage
 
-To run experiments using the test suite, follow these steps:
+Example usage:
 
-1. Configure experiment parameters in `config.yaml`.
-2. Run the experiment:
+1. Run the pretraining experiment on gpt2 and openwebtext:
 
     ```bash
-    python run_experiment.py
+    torchrun --nproc_per_node 4 -m run_clm \
+    --config_name gpt2 \
+    --tokenizer_name gpt2 \
+    --dataset_name openwebtext \
+    --per_device_train_batch_size 20 \
+    --per_device_eval_batch_size 24 \
+    --do_train \
+    --do_eval \
+    --output_dir result/gpt2_lion_wd_0.1 \
+    --report_to wandb \
+    --torch_dtype bfloat16 \
+    --gradient_accumulation_steps 8 \
+    --max_steps 100000 \
+    --warmup_steps 2000 \
+    --optim lion \
+    --save_total_limit 2 \
+    --learning_rate 0.0001 \
+    --weight_decay 0.1 \
+    --async_grad
     ```
+
+2. Run the SFT experiment on llama7B and stack-exchanged-pair
+    ```
+    torchrun --nproc_per_node 4 -m sft_llama2 \
+    --output_dir="./sft" \
+    --max_steps=500 \
+    --logging_steps=10 \
+    --save_steps=10 \
+    --per_device_train_batch_size=4 \
+    --per_device_eval_batch_size=1 \
+    --gradient_accumulation_steps=2 \
+    --gradient_checkpointing=False \
+    --group_by_length=False \
+    --learning_rate=1e-4 \
+    --lr_scheduler_type="cosine" \
+    --warmup_steps=100 \
+    --weight_decay=0.05 \
+    --optim="paged_adamw_32bit" \
+    --bf16=True \
+    --remove_unused_columns=False \
+    --run_name="sft_llama2" \
+    --report_to="wandb" \
+    --optim lion \
+     --async_grad
+    ```
+
+    
 
 3. View results and analysis in the `results` directory.
 
