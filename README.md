@@ -59,10 +59,10 @@ Ensure you have the following prerequisites installed:
 
 Example usage:
 
-1. Run the pretraining experiment on gpt2 and openwebtext:
+Run the pretraining experiment on gpt2 and openwebtext:
 
     ```bash
-    torchrun --nproc_per_node 4 -m run_clm \
+    torchrun --nproc_per_node 4 -m benchmarks/gpt2_pretraining/run_clm \
     --config_name gpt2 \
     --tokenizer_name gpt2 \
     --dataset_name openwebtext \
@@ -80,12 +80,16 @@ Example usage:
     --save_total_limit 2 \
     --learning_rate 0.0001 \
     --weight_decay 0.1 \
+    --task pretraining \
     --async_grad
     ```
 
-2. Run the SFT experiment on llama7B and stack-exchanged-pair
-    ```
-    torchrun --nproc_per_node 4 -m sft_llama2 \
+---
+
+Run the SFT experiment on llama7B and stack-exchanged-pair and prepare checkpoint for next step
+    
+    ```bash
+    torchrun --nproc_per_node 4 -m benchmarks/llama2_dpo/sft_llama2 \
     --output_dir="./sft" \
     --max_steps=500 \
     --logging_steps=10 \
@@ -104,11 +108,22 @@ Example usage:
     --remove_unused_columns=False \
     --run_name="sft_llama2" \
     --report_to="wandb" \
-    --optim lion \
-     --async_grad
+    --optim distributed_lion \
+    --task sft \
+    --async_grad
     ```
 
-    
+Run DPO
+
+    ```bash
+    torchrun --nproc_per_node 4 -m benchmarks/llama2_dpo/dpo_llama2 \
+         --model_name_or_path="sft/final_checkpoint" \
+         --output_dir="dpo" \
+         --optim distributed_lion \
+         --task dpo \
+         --async_grad
+    ```
+
 
 3. View results and analysis in the `results` directory.
 
@@ -135,7 +150,7 @@ If you use this test suite in your research or work, please consider citing the 
 
 We would like to express our gratitude to the contributors and researchers who have made this project possible. Special thanks to [list of contributors] for their valuable input and feedback.
 
-For more information about the UT Statistical Learning & AI Group, visit [our website](https://www.utstat.ai).
+For more information about the UT Statistical Learning & AI Group, visit [our website](https://www.cs.utexas.edu/~qlearning/).
 
 ---
 
