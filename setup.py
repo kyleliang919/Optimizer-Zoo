@@ -7,6 +7,9 @@ setup(
     install_requires=[
         # list your package dependencies here
         "transformers>=4.36.2",
-        "trl>=0.7.4"
+        "trl>=0.7.4",
+        "torchvision",
+        "torch",
+        "diffuser"
     ],
 )

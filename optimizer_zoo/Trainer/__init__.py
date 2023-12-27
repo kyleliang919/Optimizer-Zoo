@@ -1,2 +1,2 @@
 from .utils import create_trainer
-from .async_trainer import AsyncTrainingArguments
+from .async_trainer import AsyncTrainingArguments, AsyncSeq2SeqTrainingArguments
