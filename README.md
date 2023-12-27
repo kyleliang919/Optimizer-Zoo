@@ -122,7 +122,7 @@ Run DPO
 
 3. View results and analysis in the `results` directory.
 
-For detailed usage instructions, refer to the [user documentation](docs/user-docs.md).
+For detailed usage instructions, refer to the README.md's in the specific task in the [benchmarks](benchmarks) folder.
 
 ## Benchmarks
 Please refer to the following tables for the performance of different optimizers
