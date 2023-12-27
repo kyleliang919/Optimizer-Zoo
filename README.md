@@ -146,7 +146,3 @@ If you use this test suite in your research or work, please consider citing the 
 We would like to express our gratitude to the contributors and researchers who have made this project possible. Special thanks to [list of contributors] for their valuable input and feedback.
 
 For more information about the UT Statistical Learning & AI Group, visit [our website](https://www.cs.utexas.edu/~qlearning/).
-
----
-
-Feel free to customize this README to suit the specific details of your repository and provide more specific information about the transformer models and datasets used in your test suite.
