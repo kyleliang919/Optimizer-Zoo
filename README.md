@@ -61,7 +61,6 @@ Example usage:
 
 Run the pretraining experiment on gpt2 and openwebtext:
 
-    ```bash
     torchrun --nproc_per_node 4 -m benchmarks/gpt2_pretraining/run_clm \
     --config_name gpt2 \
     --tokenizer_name gpt2 \
@@ -70,7 +69,7 @@ Run the pretraining experiment on gpt2 and openwebtext:
     --per_device_eval_batch_size 24 \
     --do_train \
     --do_eval \
-    --output_dir result/gpt2_lion_wd_0.1 \
+    --output_dir results/gpt2_lion_wd_0.1 \
     --report_to wandb \
     --torch_dtype bfloat16 \
     --gradient_accumulation_steps 8 \
@@ -82,7 +81,7 @@ Run the pretraining experiment on gpt2 and openwebtext:
     --weight_decay 0.1 \
     --task pretraining \
     --async_grad
-    ```
+    
 
 ---
 
